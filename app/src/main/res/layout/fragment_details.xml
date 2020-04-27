@@ -1,14 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.DetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_details_fragment" />
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="@+id/gists"
+        app:layout_constraintStart_toEndOf="@+id/gists"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="50sp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/handle"
+        app:layout_constraintEnd_toEndOf="@+id/gists"
+        app:layout_constraintStart_toEndOf="@+id/gists"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:textSize="30sp"/>
+
+
+    <TextView
+        android:id="@+id/organization"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/organization"
+        app:layout_constraintBaseline_toBaselineOf="@+id/email"
+        app:layout_constraintEnd_toStartOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/e_mail"
+        app:layout_constraintEnd_toStartOf="@+id/website"
+        app:layout_constraintStart_toEndOf="@+id/organization"
+        app:layout_constraintTop_toBottomOf="@+id/handle"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/website"
+        app:layout_constraintBaseline_toBaselineOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/email"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/repositories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/repositories"
+        app:layout_constraintBaseline_toBaselineOf="@+id/gists"
+        app:layout_constraintEnd_toStartOf="@+id/gists"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/website"
+        android:textSize="30sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/repository_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/repository_count"
+        app:layout_constraintBaseline_toBaselineOf="@+id/gists_count"
+        app:layout_constraintEnd_toStartOf="@+id/gists_count"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+
+    <TextView
+        android:id="@+id/gists"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/gists"
+        app:layout_constraintEnd_toStartOf="@id/followers"
+        app:layout_constraintStart_toEndOf="@+id/repositories"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:id="@+id/gists_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/gists_count"
+        app:layout_constraintEnd_toEndOf="@id/followers_count"
+        app:layout_constraintStart_toEndOf="@+id/repository_count"
+        app:layout_constraintTop_toBottomOf="@+id/repositories"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/followers"
+        app:layout_constraintBaseline_toBaselineOf="@+id/gists"
+        app:layout_constraintStart_toEndOf="@+id/gists"
+        app:layout_constraintEnd_toStartOf="@+id/following"
+        app:layout_constraintTop_toBottomOf="@id/website"
+        android:textSize="30sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/followers_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/followers_count"
+        app:layout_constraintBaseline_toBaselineOf="@+id/gists_count"
+        app:layout_constraintStart_toEndOf="@+id/gists_count"
+        app:layout_constraintEnd_toStartOf="@+id/following_count"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/following"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/followers"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:id="@+id/following_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/following_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/followers_count"
+        app:layout_constraintTop_toBottomOf="@+id/following"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

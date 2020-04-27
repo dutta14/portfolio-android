@@ -6,4 +6,17 @@
     <string name="profile_picture">Profile picture</string>
     <string name="github_username">GitHub Username</string>
     <string name="get_data">Get Data</string>
+    <string name="name">Name</string>
+    <string name="handle">Handle</string>
+    <string name="organization">Organization</string>
+    <string name="e_mail">E-mail</string>
+    <string name="website">Website</string>
+    <string name="repositories">Repos</string>
+    <string name="repository_count">Repository count</string>
+    <string name="gists">Gists</string>
+    <string name="gists_count">Gists count</string>
+    <string name="followers">Followers</string>
+    <string name="followers_count">Followers count</string>
+    <string name="following">Following</string>
+    <string name="following_count">Following count</string>
 </resources>

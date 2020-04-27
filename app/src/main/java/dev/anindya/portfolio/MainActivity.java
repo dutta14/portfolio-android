@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                                 )
                                 .replace(
                                         R.id.dual_screen_end_container_id,
-                                        DetailsFragment.newInstance(AccountType.NONE),
+                                        DetailsFragment.newInstance(AccountType.NONE, null),
                                         null
                                 ).commit();
                     }
